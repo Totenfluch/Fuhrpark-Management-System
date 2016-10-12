@@ -65,7 +65,10 @@ public class Frame extends Application{
 				
 				final int thisAuto = autoNummber;
 				buchenButton.setOnAction(ae -> {
-					autos.get(thisAuto).buchen(Timestamp.valueOf(DatePicker1.getValue().atStartOfDay()), Timestamp.valueOf(DatePicker2.getValue().atStartOfDay()));
+					if(Timestamp.valueOf(DatePicker1.getValue().atStartOfDay()).getTime() > Timestamp.valueOf(DatePicker2.getValue().atStartOfDay()).getTime())
+						buchungsLog.appendText("Ungültiger Zeitraum\n");
+					else
+						autos.get(thisAuto).buchen(Timestamp.valueOf(DatePicker1.getValue().atStartOfDay()), Timestamp.valueOf(DatePicker2.getValue().atStartOfDay()));
 				});
 				
 				gridPane.add(autoBox, i, x);
