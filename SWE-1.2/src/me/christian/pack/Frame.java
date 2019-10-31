@@ -20,7 +20,7 @@ import javafx.stage.Stage;
 public class Frame extends Application{
 	private static ArrayList<DienstAuto> autos;
 	public static TextArea buchungsLog;
-	
+       //x
 	static String[] automarken = {"Audi", "BMW", "Porsche", "Ford", "Renault", "VW", "Bentley", "Mercedes", "CLA 45 AMG 4matic"};
 	static String[] sekundärnamen = {"Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliet", "Kilo", "Lima"};
 	
